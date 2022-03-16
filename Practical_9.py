@@ -1,5 +1,8 @@
+# NAME : ANKIT GANATRA
+# ID : 20CE030
 # Consider an example of declaring the examination result. Design three classes: Student, Exam, and Result. The Student class has data members such as those representing rollNumber, Name, etc. Create the class Exam by inheriting Student class. The Exam class adds fields representing the marks scored in six subjects. Derive Result from the Exam class, and it has its own fields such as total_marks. Write an interactive program to model this relationship.
 
+# student class definition
 class Student:
     def __init__(self, rollNo, name):
         self.rollNo = rollNo
@@ -9,7 +12,7 @@ class Student:
         print(f'Student Roll No is : {self.rollNo}')
         print(f'Student Name is : {self.name}')
 
-
+# exam class definition
 class Exam(Student):
     def __init__(self, rollNo, name, subject):
         super().__init__(rollNo, name)
@@ -21,6 +24,7 @@ class Exam(Student):
             print(f'Subject {i+1} Marks: {self.subject[i]}')
 
 
+# result class definition
 class Result(Exam):
     total_marks = 0
 
